@@ -1,352 +1,392 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="referrer" content="no-referrer">
-  <title>Soturna Ami - Bonecos de Crochê</title>
-  <style>
-    :root {
-      --bg-gradient: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #e8eaf6 100%);
-      --card-bg: rgba(255, 255, 255, 0.75);
-      --card-border: rgba(255, 255, 255, 0.9);
-      --primary: #f06292;
-      --primary-hover: #e91e63;
-      --text-main: #4a148c;
-      --text-muted: #880e4f;
-      --shadow: 0 8px 32px 0 rgba(240, 98, 146, 0.15);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Soturna Ami - Bonecos de Crochê</title>
+    <style>
+      :root {
+        --bg-gradient: linear-gradient(
+          135deg,
+          #fce4ec 0%,
+          #f3e5f5 50%,
+          #e8eaf6 100%
+        );
+        --card-bg: rgba(255, 255, 255, 0.75);
+        --card-border: rgba(255, 255, 255, 0.9);
+        --primary: #f06292;
+        --primary-hover: #e91e63;
+        --text-main: #4a148c;
+        --text-muted: #880e4f;
+        --shadow: 0 8px 32px 0 rgba(240, 98, 146, 0.15);
+      }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-    body {
-      background: var(--bg-gradient);
-      background-attachment: fixed;
-      color: var(--text-main);
-      min-height: 100vh;
-      padding: 20px 10px;
-    }
+      body {
+        background: var(--bg-gradient);
+        background-attachment: fixed;
+        color: var(--text-main);
+        min-height: 100vh;
+        padding: 20px 10px;
+      }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
 
-    .logo-container {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #ffffff;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+      .logo-container {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
 
-    .logo-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+      .logo-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-    h1 {
-      font-size: 2.2rem;
-      color: var(--text-main);
-      margin-bottom: 5px;
-    }
+      h1 {
+        font-size: 2.2rem;
+        color: var(--text-main);
+        margin-bottom: 5px;
+      }
 
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 1rem;
-    }
+      .subtitle {
+        color: var(--text-muted);
+        font-size: 1rem;
+      }
 
-    .social-section {
-      margin-bottom: 35px;
-    }
+      .social-section {
+        margin-bottom: 35px;
+      }
 
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
 
-    .btn-social {
-      background: rgba(255, 255, 255, 0.8);
-      color: var(--text-main);
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      backdrop-filter: blur(5px);
-      border: 1px solid var(--card-border);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
+      .btn-social {
+        background: rgba(255, 255, 255, 0.8);
+        color: var(--text-main);
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        backdrop-filter: blur(5px);
+        border: 1px solid var(--card-border);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
 
-    .btn-social:hover {
-      transform: translateY(-2px);
-      background: #ffffff;
-      box-shadow: 0 6px 15px rgba(240, 98, 146, 0.2);
-    }
+      .btn-social:hover {
+        transform: translateY(-2px);
+        background: #ffffff;
+        box-shadow: 0 6px 15px rgba(240, 98, 146, 0.2);
+      }
 
-    .catalog-title {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 1.6rem;
-      color: var(--text-main);
-    }
+      .catalog-title {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 1.6rem;
+        color: var(--text-main);
+      }
 
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 25px;
-    }
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 25px;
+      }
 
-    .product-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 15px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s ease;
-    }
+      .product-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--card-border);
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease;
+      }
 
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
+      .product-card:hover {
+        transform: translateY(-5px);
+      }
 
-    .view-toggle {
-      display: flex;
-      gap: 5px;
-      background: rgba(255, 255, 255, 0.5);
-      padding: 4px;
-      border-radius: 15px;
-      margin-bottom: 12px;
-      width: 100%;
-    }
+      .view-toggle {
+        display: flex;
+        gap: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 4px;
+        border-radius: 15px;
+        margin-bottom: 12px;
+        width: 100%;
+      }
 
-    .toggle-btn {
-      flex: 1;
-      border: none;
-      background: transparent;
-      padding: 6px 10px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--text-main);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
+      .toggle-btn {
+        flex: 1;
+        border: none;
+        background: transparent;
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-main);
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
 
-    .toggle-btn.active {
-      background: var(--primary);
-      color: #ffffff;
-      box-shadow: 0 2px 8px rgba(240, 98, 146, 0.4);
-    }
+      .toggle-btn.active {
+        background: var(--primary);
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(240, 98, 146, 0.4);
+      }
 
-    .image-viewer {
-      width: 100%;
-      height: 250px;
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      margin-bottom: 12px;
-      background: rgba(255, 255, 255, 0.5);
-    }
+      .image-viewer {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 12px;
+        background: rgba(255, 255, 255, 0.5);
+      }
 
-    .product-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
+      .product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
 
-    .product-img.active {
-      opacity: 1;
-    }
+      .product-img.active {
+        opacity: 1;
+      }
 
-    .product-info {
-      text-align: center;
-      margin-bottom: 15px;
-    }
+      .product-info {
+        text-align: center;
+        margin-bottom: 15px;
+      }
 
-    .product-name {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--text-main);
-    }
+      .product-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text-main);
+      }
 
-    .btn-order {
-      width: 100%;
-      background: var(--primary);
-      color: #ffffff;
-      text-decoration: none;
-      text-align: center;
-      padding: 10px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      transition: background 0.3s ease;
-      margin-top: auto;
-    }
+      .btn-order {
+        width: 100%;
+        background: var(--primary);
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: background 0.3s ease;
+        margin-top: auto;
+      }
 
-    .btn-order:hover {
-      background: var(--primary-hover);
-    }
+      .btn-order:hover {
+        background: var(--primary-hover);
+      }
 
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-  </style>
-</head>
-<body>
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <img
+            src="muñeca 1_files/colores.jpg"
+            alt="Logo Soturna Ami"
+            class="logo-img"
+            onerror="
+              this.src =
+                'https://via.placeholder.com/100/f06292/ffffff?text=Soturna+Ami'
+            "
+          />
+        </div>
+        <h1>Soturna Ami</h1>
+        <p class="subtitle">Bonecos & Amigurumis feitos à mão com amor ✨</p>
+      </header>
 
-  <div class="container">
-    <header>
-      <div class="logo-container">
-        <img src="muñeca 1_files/colores.jpg" alt="Logo Soturna Ami" class="logo-img" onerror="this.src='https://via.placeholder.com/100/f06292/ffffff?text=Soturna+Ami'">
-      </div>
-      <h1>Soturna Ami</h1>
-      <p class="subtitle">Bonecos & Amigurumis feitos à mão com amor ✨</p>
-    </header>
+      <section class="social-section">
+        <div class="social-links">
+          <a
+            href="https://www.instagram.com/soturnaami/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-social"
+          >
+            📸 Instagram
+          </a>
+          <a
+            href="https://shopee.com.br/shop/1050122904?uls_trackid=56ngvg2300k8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-social"
+          >
+            🛍️ Shopee
+          </a>
+          <a
+            href="https://www.tiktok.com/@soturnaami?_r=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-social"
+          >
+            🎵 TikTok
+          </a>
+        </div>
+      </section>
 
-    <section class="social-section">
-      <div class="social-links">
-        <a href="https://www.instagram.com/soturnaami/" target="_blank" rel="noopener noreferrer" class="btn-social">
-          📸 Instagram
-        </a>
-        <a href="https://shopee.com.br/shop/1050122904?uls_trackid=56ngvg2300k8" target="_blank" rel="noopener noreferrer" class="btn-social">
-          🛍️ Shopee
-        </a>
-        <a href="https://www.tiktok.com/@soturnaami?_r=1" target="_blank" rel="noopener noreferrer" class="btn-social">
-          🎵 TikTok
-        </a>
-      </div>
-    </section>
+      <main>
+        <h2 class="catalog-title">Minhas Criações</h2>
+        <div class="products-grid" id="products-container">
+          <p
+            style="
+              text-align: center;
+              grid-column: 1/-1;
+              color: var(--text-muted);
+            "
+          >
+            Carregando produtos...
+          </p>
+        </div>
+      </main>
 
-    <main>
-      <h2 class="catalog-title">Minhas Criações</h2>
-      <div class="products-grid" id="products-container">
-        <p style="text-align: center; grid-column: 1/-1; color: var(--text-muted);">Carregando produtos...</p>
-      </div>
-    </main>
+      <footer>
+        <p>© Soturna Ami - Todos os direitos reservados</p>
+      </footer>
+    </div>
 
-    <footer>
-      <p>© Soturna Ami - Todos os direitos reservados</p>
-    </footer>
-  </div>
+    <script>
+      const SHEET_URL =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQaeJpxzARCK5ODjmYQgLajRuay24_3N-Yj1WHHM20CkTdYyEizjKeZG501BBUY1hWaumjG6jh0SJKW/pub?output=csv";
 
-  <script>
-    const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQaeJpxzARCK5ODjmYQgLajRuay24_3N-Yj1WHHM20CkTdYyEizjKeZG501BBUY1hWaumjG6jh0SJKW/pub?output=csv';
+      function cleanCell(str) {
+        if (!str) return "";
+        return str.replace(/^["'\s]+|["'\s]+$/g, "").trim();
+      }
 
-    function cleanCell(str) {
-      if (!str) return '';
-      return str.replace(/^["'\s]+|["'\s]+$/g, '').trim();
-    }
+      function parseCSV(text) {
+        const lines = text.split(/\r?\n/);
+        const rows = [];
 
-    function parseCSV(text) {
-      const lines = text.split(/\r?\n/);
-      const rows = [];
+        for (let i = 0; i < lines.length; i++) {
+          let line = lines[i].trim();
+          if (!line) continue;
 
-      for (let i = 0; i < lines.length; i++) {
-        let line = lines[i].trim();
-        if (!line) continue;
+          let row = [];
+          let insideQuotes = false;
+          let cell = "";
 
-        let row = [];
-        let insideQuotes = false;
-        let cell = '';
-
-        for (let j = 0; j < line.length; j++) {
-          let char = line[j];
-          if (char === '"') {
-            insideQuotes = !insideQuotes;
-          } else if (char === ',' && !insideQuotes) {
-            row.push(cleanCell(cell));
-            cell = '';
-          } else {
-            cell += char;
+          for (let j = 0; j < line.length; j++) {
+            let char = line[j];
+            if (char === '"') {
+              insideQuotes = !insideQuotes;
+            } else if (char === "," && !insideQuotes) {
+              row.push(cleanCell(cell));
+              cell = "";
+            } else {
+              cell += char;
+            }
           }
+          row.push(cleanCell(cell));
+          rows.push(row);
         }
-        row.push(cleanCell(cell));
-        rows.push(row);
+        return rows;
       }
-      return rows;
-    }
 
-    function formatUrl(url) {
-      if (!url) return 'https://via.placeholder.com/300x300/fce4ec/f06292?text=Sem+Imagem';
-      url = cleanCell(url);
-      if (url.startsWith('http://')) {
-        url = url.replace('http://', 'https://');
-      } else if (!url.startsWith('https://')) {
-        url = 'https://' + url;
+      function formatUrl(url) {
+        if (!url)
+          return "https://via.placeholder.com/300x300/fce4ec/f06292?text=Sem+Imagem";
+        url = cleanCell(url);
+        if (url.startsWith("http://")) {
+          url = url.replace("http://", "https://");
+        } else if (!url.startsWith("https://")) {
+          url = "https://" + url;
+        }
+        return url;
       }
-      return url;
-    }
 
-    async function cargarProductos() {
-      const container = document.getElementById('products-container');
+      async function cargarProductos() {
+        const container = document.getElementById("products-container");
 
-      try {
-        const res = await fetch(SHEET_URL + '&t=' + Date.now());
-        if (!res.ok) throw new Error('Error al conectar');
+        try {
+          const res = await fetch(SHEET_URL + "&t=" + Date.now());
+          if (!res.ok) throw new Error("Error al conectar");
 
-        const csvText = await res.text();
-        const filas = parseCSV(csvText);
+          const csvText = await res.text();
+          const filas = parseCSV(csvText);
 
-        container.innerHTML = '';
+          container.innerHTML = "";
 
-        if (filas.length <= 1) {
-          container.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">Nenhum produto encontrado.</p>';
-          return;
-        }
+          if (filas.length <= 1) {
+            container.innerHTML =
+              '<p style="text-align:center; grid-column: 1/-1;">Nenhum produto encontrado.</p>';
+            return;
+          }
 
-        const productosFiltrados = filas.slice(1).filter(row => {
-          if (!row || row.length === 0) return false;
-          const nombre = row[0] ? row[0].toLowerCase() : '';
-          return nombre !== '' && nombre !== 'nombre' && nombre !== 'nome';
-        });
+          const productosFiltrados = filas.slice(1).filter((row) => {
+            if (!row || row.length === 0) return false;
+            const nombre = row[0] ? row[0].toLowerCase() : "";
+            return nombre !== "" && nombre !== "nombre" && nombre !== "nome";
+          });
 
-        const productosFinales = productosFiltrados.slice(0, 6);
+          const productosFinales = productosFiltrados.slice(0, 6);
 
-        if (productosFinales.length === 0) {
-          container.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">Nenhum produto cadastrado.</p>';
-          return;
-        }
+          if (productosFinales.length === 0) {
+            container.innerHTML =
+              '<p style="text-align:center; grid-column: 1/-1;">Nenhum produto cadastrado.</p>';
+            return;
+          }
 
-        productosFinales.forEach(row => {
-          const nombre = row[0] || 'Amigurumi';
-          const imgFrente = formatUrl(row[1]);
-          const imgLado = formatUrl(row[2]) || imgFrente;
-          const linkDirect = formatUrl(row[3]) || 'https://www.instagram.com/soturnaami/';
+          productosFinales.forEach((row) => {
+            const nombre = row[0] || "Amigurumi";
+            const imgFrente = formatUrl(row[1]);
+            const imgLado = formatUrl(row[2]) || imgFrente;
+            const linkDirect =
+              formatUrl(row[3]) || "https://www.instagram.com/soturnaami/";
 
-          const card = document.createElement('article');
-          card.className = 'product-card';
+            const card = document.createElement("article");
+            card.className = "product-card";
 
-          card.innerHTML = `
+            card.innerHTML = `
             <div class="view-toggle">
               <button class="toggle-btn active" onclick="switchView(this, 'front')">Vista Frontal</button>
               <button class="toggle-btn" onclick="switchView(this, 'side')">Vista Lateral</button>
@@ -363,34 +403,34 @@
             </a>
           `;
 
-          container.appendChild(card);
-        });
-
-      } catch (err) {
-        console.error('Error:', err);
-        container.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">Erro ao carregar o catálogo.</p>';
+            container.appendChild(card);
+          });
+        } catch (err) {
+          console.error("Error:", err);
+          container.innerHTML =
+            '<p style="text-align:center; grid-column: 1/-1;">Erro ao carregar o catálogo.</p>';
+        }
       }
-    }
 
-    function switchView(button, view) {
-      const card = button.closest('.product-card');
-      const buttons = card.querySelectorAll('.toggle-btn');
-      const imgFront = card.querySelector('.img-front');
-      const imgSide = card.querySelector('.img-side');
+      function switchView(button, view) {
+        const card = button.closest(".product-card");
+        const buttons = card.querySelectorAll(".toggle-btn");
+        const imgFront = card.querySelector(".img-front");
+        const imgSide = card.querySelector(".img-side");
 
-      buttons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
 
-      if (view === 'front') {
-        imgFront.classList.add('active');
-        imgSide.classList.remove('active');
-      } else {
-        imgSide.classList.add('active');
-        imgFront.classList.remove('active');
+        if (view === "front") {
+          imgFront.classList.add("active");
+          imgSide.classList.remove("active");
+        } else {
+          imgSide.classList.add("active");
+          imgFront.classList.remove("active");
+        }
       }
-    }
 
-    document.addEventListener('DOMContentLoaded', cargarProductos);
-  </script>
-</body>
+      document.addEventListener("DOMContentLoaded", cargarProductos);
+    </script>
+  </body>
 </html>
